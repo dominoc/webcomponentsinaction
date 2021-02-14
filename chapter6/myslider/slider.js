@@ -1,6 +1,16 @@
 import Template from './template.js';
 
 class Slider extends HTMLElement {
+	constructor() {
+		super();
+		this.attachShadow({mode: 'open'});
+		this.shadowRoot.innerHTML = Template.render();
+		this.dom = Template.mapDOM(this.shadowRoot);
+		document.addEventListener('mousemove', e => this.eventHandler(e));
+		document.addEventListener('mouseup', e => this.eventHandler(e));
+		this.addEventListener('mousedown', e => this.eventHandler(e));
+	}
+	/*
 	connectedCallback() {
 		this.innerHTML = Template.render();
 		this.dom = Template.mapDOM(this);
@@ -12,6 +22,7 @@ class Slider extends HTMLElement {
 		this.refreshSlider(this.getAttribute('value'));
 		this.setColor(this.getAttribute('backgroundcolor'));
 	}
+	*/
 	static get observedAttributes() {
 		return ['value', 'backgroundcolor'];
 	}

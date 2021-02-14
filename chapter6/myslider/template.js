@@ -7,31 +7,31 @@ export default {
 	},
 	mapDOM(scope) {
 		return {
-			overlay: scope.querySelector('.bg-overlay'),
-			thumb: scope.querySelector('.thumb'),
+			overlay: scope.getElementById('bg-overlay'),
+			thumb: scope.getElementById('thumb'),
 		}
 	},
 	html() {
 		return `
-			<div class="bg-overlay"></div>
-			<div class="thumb"></div>
+			<div id="bg-overlay"></div>
+			<div id="thumb"></div>
 			`;
 	},
 	css() {
 		return `
 			<style>
-				wcia-slider {
+				:host {
 					display: inline-block;
 					position: relative;
 					border-radius: 3px;
 				}
-				.bg-overlay {
+				#bg-overlay {
 					width: 100%;
 					height: 100%;
 					position: absolute;
 					border-radius: 3px;
 				}
-				.thumb {
+				#thumb {
 					margin-top: -1px;
 					width: 5px;
 					height: calc(100% - 5px);
