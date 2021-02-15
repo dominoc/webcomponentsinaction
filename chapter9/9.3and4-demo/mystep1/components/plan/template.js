@@ -32,7 +32,7 @@ export default {
 		}
 	},
 	renderExercise(exercise) {
-		return `<wkout-exercise class="${exercise.type}"
+		return `<wkout-exercise class="${exercise.type} plan"
 			${Exercise.toAttributeString(exercise.serialize())}></wkout-exercise>`
 	}
 }
