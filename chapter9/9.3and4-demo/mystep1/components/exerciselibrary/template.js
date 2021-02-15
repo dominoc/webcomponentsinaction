@@ -18,8 +18,12 @@ export default {
 	css() {
 		return `<style>
 			host {
-				display: flex;
-				flex-direction: column;
+				display: inline-block;
+				font-family: var(--font);
+				color: var(--text-color);
+			}
+			h1 {
+				font-size: var(--header-font-size);
 			}
 			#container {
 				overflow-y: scroll;

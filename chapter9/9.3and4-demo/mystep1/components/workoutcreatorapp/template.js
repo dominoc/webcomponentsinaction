@@ -24,7 +24,7 @@ export default {
 					width: 1px;
 					height: 100%;
 					margin-right: 25px;
-					background-color: black;
+					background-color: var(--text-color);
 				}
 			</style>`;
 	},

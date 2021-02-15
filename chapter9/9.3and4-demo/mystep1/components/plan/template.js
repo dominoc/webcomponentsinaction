@@ -15,6 +15,11 @@ export default {
 				:host {
 					display: flex;
 					flex-direction: column;
+					font-family: var(--font);
+					color: var(--text-color);
+				}
+				h1 {
+					font-size: var(--header-font-size);
 				}
 				#time {
 					height: 30px;

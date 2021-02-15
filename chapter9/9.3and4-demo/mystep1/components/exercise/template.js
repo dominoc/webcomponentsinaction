@@ -26,6 +26,7 @@ export default {
 	css(exercise){
 		return `<style>
 				:host {
+					font-family: var(--font);
 					display: inline-block;
 					background: radial-gradient(circle, rgba(235,235,235,1) 0%, rgba(208,208,208,1) 100%);
 
@@ -42,8 +43,11 @@ export default {
 					font-size: small;
 					display: flex;
 					align-items: center;
-					background-color: black;
-					color: white;
+					background-color: var(--label-color);
+					color: var(--inverted-text-color);
+				}
+				:host(.library) #info {
+					padding: 5px;
 				}
 				:host(.library) #customize {
 					display: none;
