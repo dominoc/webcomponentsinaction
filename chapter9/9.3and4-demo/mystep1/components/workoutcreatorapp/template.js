@@ -18,7 +18,7 @@ export default {
 				wkout-plan {
 					flex: 1;
 					height: 100%;
-					background-color: #eaeaea;
+				/*	background-color: #eaeaea; */
 				}
 				#divider-line {
 					width: 1px;
@@ -27,5 +27,11 @@ export default {
 					background-color: black;
 				}
 			</style>`;
-	}
+	},
+	mapDOM(scope) {
+		return {
+			library: scope.querySelector('wkout-exercise-lib'),
+			plan: scope.querySelector('wkout-plan')
+		};
+	} 
 }

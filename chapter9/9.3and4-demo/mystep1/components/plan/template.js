@@ -26,4 +26,13 @@ export default {
 				}
 			</style>`;
 	},
+	mapDOM(scope) {
+		return {
+			exercises: scope.querySelector('#container')
+		}
+	},
+	renderExercise(exercise) {
+		return `<wkout-exercise class="${exercise.type}"
+			${Exercise.toAttributeString(exercise.serialize())}></wkout-exercise>`
+	}
 }
